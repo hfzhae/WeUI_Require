@@ -1,7 +1,7 @@
 define(['public'], function(){
     require.config({
         baseUrl: 'client/',
-		urlArgs:'v='+(new Date()).getTime(),//清除缓存
+		//urlArgs:'v='+(new Date()).getTime(),//清除缓存
         paths: {
 			zepto: 'lib/zepto.min',
 			zeptoCustom: 'lib/zepto.custom',
