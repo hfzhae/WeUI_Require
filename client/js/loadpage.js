@@ -44,7 +44,7 @@ define(function() {
 				require(['page'],function(setpage){
 					require(['zeptoCustom'],function(){
 						var l = $.toast('正在读取...', 'loading', 0);
-						$.getJSON('/server/asynchronous/default.asp?v=' + (new Date()).getTime(), function(data){
+						$.getJSON('server/asynchronous/default.asp?v=' + (new Date()).getTime(), function(data){
 							setpage(data)
 							$('#' + page).find('.page__bd').append('<div class="weui-cells"></div>');
 							for(var i in data){

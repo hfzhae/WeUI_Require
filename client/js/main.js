@@ -9,7 +9,7 @@ require(['config'], function () {
 		window.onresize = function() {setWideScreen();}
 		
 		require(['page'], function(setpage){
-			$.getJSON('/server/home/default.asp?v=' + (new Date()).getTime(), function(data){
+			$.getJSON('server/home/default.asp?v=' + (new Date()).getTime(), function(data){
 				setpage(data)
 				require(['example'], function(example){
 					var e = new example();
