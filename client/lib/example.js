@@ -210,7 +210,7 @@ define(function() {
 				link: location.href.split('#')[0],
 				imgUrl: 'http://'+ location.host +'/client/images/icon/logo.png'
 			};
-			var url = '/server/wx/sign.asp?url=' + encodeURIComponent(location.href.split('#')[0]);
+			var url = 'server/wx/sign.asp?url=' + encodeURIComponent(location.href.split('#')[0]);
 			//console.log(url);
 			$.getJSON(url, function (res) {
 				//console.log(res);
