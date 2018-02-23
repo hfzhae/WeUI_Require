@@ -72,6 +72,7 @@ define(function() {
 				break;
 			case 'isqrcode':
 				$('#' + page).find('.page__bd').append('<div class="qrcode" style="display:none;" id="qrcode"></div><img style="display:none;" class="barcode" id="barcode"/>');
+				var l = $.toast('正在读取...', 'loading', 0);
 				require(['qrcode'],function(){
 					var qrcode = new QRCode(document.getElementById("qrcode"), {
 						width: 150,
@@ -92,7 +93,7 @@ define(function() {
 					catch (err) {
 						$('#barcode1').remove();
 					}
-
+					l.hide();
 				});
 				break;
 			case 'uploadfile':
@@ -150,7 +151,7 @@ define(function() {
 							for (var i = 0; i < len; i++) {
 								lrz(files[i], { width: 640, fieldName: "file" }).then(function(rst) {
 									var xhr = new XMLHttpRequest();
-									xhr.open('POST', '/server/uploader/default.asp?fn=' + escape(rst.origin.name));
+									xhr.open('POST', 'server/uploader/default.asp?fn=' + escape(rst.origin.name));
 
 									xhr.onload = function() {
 										if (xhr.status === 200) {

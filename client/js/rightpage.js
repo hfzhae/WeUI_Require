@@ -89,7 +89,7 @@ define(function() {
 							for (var i = 0; i < len; i++) {
 								lrz(files[i], { width: 640, fieldName: "file" }).then(function(rst) {
 									var xhr = new XMLHttpRequest();
-									xhr.open('POST', '/server/uploader/default.asp?fn=' + escape(rst.origin.name));
+									xhr.open('POST', 'server/uploader/default.asp?fn=' + escape(rst.origin.name));
 
 									xhr.onload = function() {
 										if (xhr.status === 200) {
