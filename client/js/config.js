@@ -15,6 +15,7 @@ define(['public'], function(){
 			JsBarcode: '../client/lib/JsBarcode.all.min',
 			bootstrap: '../client/js/bootstrap',
 			lrz: '../client/lib/lrz.min',
+			datagridscrollview: '../client/lib/datagrid-scrollview',
 			wx: 'http://res.wx.qq.com/open/js/jweixin-1.2.0'
         },
 		waitSeconds: 15,//设置超时
